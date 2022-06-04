@@ -253,7 +253,7 @@ class Project:
         """
         license_files = {}
 
-        directory = str(self.root / "LICENSES/**")
+        directory = str(self.root.parent / "LICENSES/**")
         for path in glob.iglob(directory, recursive=True):
             path = Path(path)
             # For some reason, LICENSES/** is resolved even though it
